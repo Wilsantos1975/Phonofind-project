@@ -1,6 +1,6 @@
 # Phonofind-project
 
-#Phonofind: A Vinyl Marketplace App
+Phonofind: A Vinyl Marketplace App
 
 Description:
 
