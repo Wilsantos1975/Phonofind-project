@@ -1,8 +1,4 @@
 # Phonofind-project
-<<<<<<< HEAD
-
-=======
->>>>>>> 48a52a1 (updated read.me)
 Phonofind: A Vinyl Marketplace App
 
 Description:
