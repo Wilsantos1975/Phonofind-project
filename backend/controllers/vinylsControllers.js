@@ -7,9 +7,9 @@ const { getAllVinyls } = require('../queries/vinylQueries');
 vinylsRouter.get('/', async (req, res) => {
     try {
         const allVinyls = await getAllVinyls();
-        res.json.status(200).json(allVinyls);
+        res.status(200).json(allVinyls);
     } catch (error) {
-        res.json.apply(500).json({ error: error.message });
+        res.status(500).json({ error: error.message });
     }
 }); 
 

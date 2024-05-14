@@ -3,9 +3,9 @@
 const { get } = require('../app');
 const db = require('../db/index');
 
-getAllVinyls = async () => {
+getAllVinyls = async (req,res) => {
     try {
-        const allVinyls = await db.any('SELECT * FROM vinyls');
+        const allVinyls = await db.any('SELECT * FROM vynils');
         return allVinyls;
     } catch (error) {
         return error;
