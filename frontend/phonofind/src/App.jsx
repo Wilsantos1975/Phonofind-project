@@ -11,6 +11,11 @@ import Footer from "./components/common/Footer";
 import "./App.css";
 
 function App() {
+const [ vinylsData, setVinylsData] = useState([])
+
+
+
+
   return (
     <div>
       
