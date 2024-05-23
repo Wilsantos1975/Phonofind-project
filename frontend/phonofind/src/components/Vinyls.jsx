@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import { useEffect , useState} from "react";
 import Vinyl from "./Vinyl";
 
-const API = process.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_BASE_URL;
 
 function getVinyls() {
+    console.log(API)
   const [vinyls, setVinyls] = useState([]);
 
   const fetchData = async () => {
+
   const response = await fetch(`${API}/vinyls`);
+
   console.log(response)
   };
 
