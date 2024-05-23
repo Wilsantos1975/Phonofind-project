@@ -2,24 +2,40 @@
 
 function NavBar(){
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="/">Phonofind</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon">button for something</span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/login">Login</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/register">Register</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>  
-        </nav>
+        <div className="bg-gray-800">
+
+        <nav className="container mx-auto px-6 py-3">
+    <div className="flex items-center justify-between">
+      <div className="text-white font-bold text-xl">
+        <a href="#">Logo Phonofind</a>
+      </div>
+      <div className="hidden md:block">
+        <ul className="flex items-center space-x-8">
+          <li><a href="#" className="text-white">Home</a></li>
+          <li><a href="#" className="text-white">About</a></li>
+          <li><a href="#" className="text-white">Services</a></li>
+          <li><a href="#" className="text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div className="md:hidden">
+        <button className="outline-none mobile-menu-button">
+          <svg className="w-6 h-6 text-white" x-show="!showMenu" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div className="mobile-menu hidden md:hidden">
+      <ul className="mt-4 space-y-4">
+        <li><a href="#" className="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
+        <li><a href="#" className="block px-4 py-2 text-white bg-gray-900 rounded">About</a></li>
+        <li><a href="#" className="block px-4 py-2 text-white bg-gray-900 rounded">Services</a></li>
+        <li><a href="#" className="block px-4 py-2 text-white bg-gray-900 rounded">Contact</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+        </div>
     );
 }
 
