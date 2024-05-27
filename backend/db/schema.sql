@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS vynils;
 
 CREATE TABLE vynils (
   id SERIAL PRIMARY KEY,
-  title TEXT NOT NULL,
+  title TEXT NOT NULL UNIQUE,
   artist TEXT NOT NULL,
   release_year INTEGER NOT NULL,
   genre VARCHAR(255) NOT NULL,

@@ -1,31 +1,31 @@
-import { useEffect , useState} from "react";
-import Vinyl from "./Vinyl";
+// import { useEffect , useState} from "react";
+// import Vinyl from "./Vinyl";
 
-const API = import.meta.env.VITE_BASE_URL;
+// const API = import.meta.env.VITE_BASE_URL;
 
-function getVinyls() {
-    console.log(API)
-  const [vinyls, setVinyls] = useState([]);
+// function getVinyls() {
+//     console.log(API)
+//   const [vinyls, setVinyls] = useState([]);
 
-  const fetchData = async () => {
+//   const fetchData = async () => {
 
-  const response = await fetch(`${API}/vinyls`);
+//   const response = await fetch(`${API}/vinyls`);
 
-  console.log(response)
-  };
+//   console.log(response)
+//   };
 
-  useEffect(() => {
-    fetchData(); // Call the function inside useEffect
-  }, []); // Empty dependency array to fetch data on component mount
+//   useEffect(() => {
+//     fetchData(); // Call the function inside useEffect
+//   }, []); // Empty dependency array to fetch data on component mount
 
-  return (
-    <div>
-      <h1>Vinyls</h1>
-      {vinyls.map((vinyl) => (
-        <Vinyl key={vinyl.id} vinyl={vinyl} />
-      ))}
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <h1>Vinyls</h1>
+//       {vinyls.map((vinyl) => (
+//         <Vinyl key={vinyl.id} vinyl={vinyl} />
+//       ))}
+//     </div>
+//   );
+// }
 
-export default getVinyls;
+// export default getVinyls;
