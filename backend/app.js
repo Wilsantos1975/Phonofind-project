@@ -1,7 +1,7 @@
 const cors = require('cors');
 const express = require('express');
 const logger = require('morgan');
-const vinylsController = require('./controllers/vinylsControllers');
+const albumsControllers= require('../backend/controllers/albumsControllers');
 
 const app = express();
 
@@ -9,7 +9,7 @@ app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 
-app.use('/vinyls', vinylsController);
+app.use('/albums', albumsControllers);
 
 
 //health check route
