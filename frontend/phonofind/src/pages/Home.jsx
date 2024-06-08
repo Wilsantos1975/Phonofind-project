@@ -1,25 +1,25 @@
 import { useState, useEffect } from "react";
-import Vinyl from "../components/Vinyl";
+import Album from "../components/Album";
 
 const API = import.meta.env.VITE_BASE_URL;
 
 function Home() {
-  const [vinylsData, setVinylsData] = useState([]);
+  const [albumsData, setAlbumsData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${API}/vinyls`);
+      const response = await fetch(`${API}/albums`);
 
       if (!response.ok) {
         throw new Error("Something went wrong");
       }
 
       const data = await response.json();
-      setVinylsData(data);
-      console.log(vinylsData)
+      setAlbumsData(data);
+      console.log(albumsData)
     } catch (error) {
       setError(error.message);
     } finally {
@@ -41,8 +41,8 @@ function Home() {
       return (
         <div>
           <h1>Vinyls</h1>
-          {vinylsData.map((vinyl) => (
-            <Vinyl key={vinyl.id} vinyl={vinyl} />
+          {albumsData.map((album) => (
+            <Album key={album.id} album={album} />
           ))}
         </div>
       );
