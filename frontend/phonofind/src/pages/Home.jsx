@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import Album from "../components/Album";
+import Collections from "../components/Collections/Collections";
 
 const API = import.meta.env.VITE_BASE_URL;
 
 function Home() {
-  const [albumsData, setAlbumsData] = useState([]);
+  // const [albumsData, setAlbumsData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [collections, setCollectionsData] = useState([]);
 
 
   const fetchData = async () => {
@@ -18,8 +20,9 @@ function Home() {
       }
 
       const data = await response.json();
-      setAlbumsData(data);
-      console.log(albumsData)
+      // setAlbumsData(data);
+      // console.log(data);
+      setCollectionsData(data);
     } catch (error) {
       setError(error.message);
     } finally {
@@ -30,9 +33,9 @@ function Home() {
   useEffect(() => {
     fetchData(); // Call the function inside useEffect
     
-  }, [Home]);
+  }, []);
 
-  const renderVinyls = () => {
+  const renderAlbums = () => {
     if (loading) {
       return <div className="loading message">Loading...</div>;
     } else if (error) {
@@ -40,10 +43,9 @@ function Home() {
     } else {
       return (
         <div>
-          <h1>Vinyls</h1>
-          {albumsData.map((album) => (
-            <Album key={album.id} album={album} />
-          ))}
+          <h1>another sh</h1>
+          <Collections collections={collections}/>
+          
         </div>
       );
     }
@@ -52,11 +54,13 @@ function Home() {
   return (
     <div>
       <h1 className="p-6 text-xl ">Phonofind</h1>
-      <div className=" text-3xl ">{renderVinyls()}</div>
       <h1 className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
         You are in the home page , this is going to have different sections
         (components)
       </h1>
+      <div className=" text-3xl ">{renderAlbums()}
+
+      </div>
     </div>
   );
 }

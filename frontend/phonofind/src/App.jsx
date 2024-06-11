@@ -16,7 +16,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/vinyls" element={<VinylsDisplay />} /> */}
           </Routes>
         </main>
         <Footer />
