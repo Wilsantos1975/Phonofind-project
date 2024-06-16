@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS artist;
 
 
 CREATE TABLE artist (
-  artist_id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   artist_name text,
   artist_genre text, 
   artist_description text
@@ -19,7 +19,7 @@ CREATE TABLE albums (
   album_price DECIMAL(5, 2) NOT NULL,
   album_condition TEXT NOT NULL,
   album_description TEXT NOT NULL,
-  artist_id INT REFERENCES artist(artist_id) ON DELETE CASCADE
+  artist_id INT REFERENCES artist(id) ON DELETE CASCADE
   -- album_songs [],
 );
 
