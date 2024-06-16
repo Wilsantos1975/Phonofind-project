@@ -9,7 +9,7 @@ function TopRock ({collections}) {
     return ( 
 
         <div>
-            <h1>TOP ROCK</h1>
+            <h1>TOP ROCK Collection</h1>
             {filteredCollections.map((collection) => {
                 return (
                 <AlbumCard key={collection.album_id} collection={collection} />

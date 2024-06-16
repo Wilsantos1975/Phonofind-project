@@ -2,6 +2,7 @@ function AlbumCard({collection}) {
 
 
 const {album_name, album_title, album_price, release_year} = collection;
+// let filteredCollections = collections.filter((collection) => collection.album_genre === "Rock");
 
     console.group(collection)
     return ( 
