@@ -43,7 +43,7 @@ function Home() {
     } else {
       return (
         <div>
-          <h1>another sh</h1>
+          <h1>collections div</h1>
           <Collections collections={collections}/>
           
         </div>
@@ -55,7 +55,7 @@ function Home() {
     <div>
       <h1 className="p-6 text-xl ">Phonofind</h1>
       <h1 className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-        You are in the home page , this is going to have different sections
+        You are in the home page , this is going to have different collections of vinyls
         (components)
       </h1>
       <div className=" text-3xl ">{renderAlbums()}
