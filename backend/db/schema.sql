@@ -20,6 +20,7 @@ CREATE TABLE albums (
   album_condition TEXT NOT NULL,
   album_description TEXT NOT NULL,
   artist_id INT REFERENCES artist(id) ON DELETE CASCADE
+  
   -- album_songs [],
 );
 
