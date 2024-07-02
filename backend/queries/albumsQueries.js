@@ -16,7 +16,7 @@ getAllAlbums = async () => {
 // get a single Album by id
 getSingleAlbum = async (id) => {
   try {
-    const singleAlbum = await db.one("SELECT * FROM album WHERE id = $1", id);
+    const singleAlbum = await db.one("SELECT * FROM albums WHERE id = $1", id);
     console.log(singleAlbum);
     return singleAlbum;
   } catch (error) {
