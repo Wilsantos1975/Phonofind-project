@@ -18,14 +18,14 @@ albumsRouter.get("/", async (req, res) => {
   }
 });
 
-//get a single vinyl by id
+//get a single album by id
 albumsRouter.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const singleAlbum= await getSingleAlbum(id);
     res.status(200).json({ data: singleAlbum });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(404).json({ error: error.message });
   }
 });
 

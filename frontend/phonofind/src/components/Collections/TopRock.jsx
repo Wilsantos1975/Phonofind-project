@@ -9,13 +9,15 @@ function TopRock ({collections}) {
     return ( 
 
         <div>
-            <h1>TOP ROCK Collection</h1>
+            <h1 className="text-5xl text-center text-blue-700">TOP ROCK</h1>
+            <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-9 gap-4">
             {filteredCollections.map((collection) => {
                 return (
                 <AlbumCard key={collection.album_id} collection={collection} />
                 );  
             }
             )}
+                </div>
             </div>
      );
 }

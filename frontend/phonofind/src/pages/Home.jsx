@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
-import Album from "../components/Album";
 import Collections from "../components/Collections/Collections";
 
 const API = import.meta.env.VITE_BASE_URL;
 
 function Home() {
-  // const [albumsData, setAlbumsData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [collections, setCollectionsData] = useState([]);
-
 
   const fetchData = async () => {
     try {
@@ -32,7 +29,6 @@ function Home() {
 
   useEffect(() => {
     fetchData(); // Call the function inside useEffect
-    
   }, []);
 
   const renderAlbums = () => {
@@ -43,9 +39,7 @@ function Home() {
     } else {
       return (
         <div>
-          <h1>collections div</h1>
-          <Collections collections={collections}/>
-          
+          <Collections collections={collections} />
         </div>
       );
     }
@@ -55,12 +49,10 @@ function Home() {
     <div>
       <h1 className="p-6 text-xl ">Phonofind</h1>
       <h1 className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-        You are in the home page , this is going to have different collections of vinyls
-        (components)
+        You are in the home page , this is going to have different collections
+        of vinyls (components)
       </h1>
-      <div className=" text-3xl ">{renderAlbums()}
-
-      </div>
+      <div className=" text-3xl ">{renderAlbums()}</div>
     </div>
   );
 }

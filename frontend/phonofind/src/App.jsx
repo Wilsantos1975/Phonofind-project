@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
-// import VinylsDisplay from "./pages/VinylsDisplay";
+import DisplayAlbum from "./pages/DisplayAlbum";
 
 import NavBar from "./components/common/NavBar";
 import Footer from "./components/common/Footer";
@@ -16,6 +16,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/albums/:id" element={<DisplayAlbum />} />
           </Routes>
         </main>
         <Footer />
