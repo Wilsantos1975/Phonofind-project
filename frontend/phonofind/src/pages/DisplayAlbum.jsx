@@ -13,7 +13,7 @@ function DisplayAlbum() {
 
   const fetchAlbum = async () => {
     try {
-      const response = await fetch(`${API}/albums/${id}`);
+      const response = await fetch(`${API}/albums/`);
       if (!response.ok) {
         throw new Error("Something went wrong");
       }
