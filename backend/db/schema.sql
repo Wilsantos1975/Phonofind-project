@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS vinyls;
 DROP TABLE IF EXISTS artist;
 
 
+
 CREATE TABLE artist (
   id SERIAL PRIMARY KEY,
   artist_name text,

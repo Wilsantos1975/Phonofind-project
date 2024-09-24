@@ -6,7 +6,18 @@ const db = require("../db/index");
 // get all albums
 getAllAlbums = async () => {
   try {
-    const allAlbums = await db.any("SELECT * FROM albums");
+    const allAlbums = await db.any(`SELECT 
+    a.album_id,
+    a.album_title,
+    a.album_price,
+    a.album_release_year,
+    a.album_genre,
+    a.album_condition,
+    ar.artist_name
+FROM 
+    albums a
+JOIN 
+    artist ar ON a.artist_id = ar.id`);
     return allAlbums;
   } catch (error) {
     return error;
